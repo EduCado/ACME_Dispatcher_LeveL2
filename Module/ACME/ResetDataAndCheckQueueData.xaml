@@ -99,7 +99,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="ResetDataAndCheckQueueData" sap:VirtualizedContainerService.HintSize="733,474.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="ResetDataAndCheckQueueData" sap:VirtualizedContainerService.HintSize="733,288.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="TotalItem" />
       <Variable x:TypeArguments="x:Boolean" Name="IsDataReset" />
@@ -131,10 +131,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:GetQueueItems>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID0" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-          <FlowDecision.Condition>
-            <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="TotalItem.Count=0" />
-          </FlowDecision.Condition>
+        <FlowDecision x:Name="__ReferenceID0" Condition="[TotalItem.Count=0]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -150,7 +147,7 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">95,325</av:Point>
                   <av:Size x:Key="ShapeSize">110,70</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">205,360 258,360 258,428.7681323877069 65,428.7681323877069 65,540 95,540</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">150,395 150,505</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9da1069c-53c9-4963-8296-46a325874b02" Version="V2">
@@ -249,20 +246,20 @@
                           <av:Size x:Key="ShapeSize">110,70</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[IsDataReset]" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If Condition="[IsDataReset]" sap:VirtualizedContainerService.HintSize="518,1056" sap2010:WorkflowViewState.IdRef="If_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,734" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,694" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Reset Test Data" sap:VirtualizedContainerService.HintSize="450,674" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="9da1069c-53c9-4963-8296-46a325874b02" Version="V2">
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Reset Test Data" sap:VirtualizedContainerService.HintSize="450,634" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="9da1069c-53c9-4963-8296-46a325874b02" Version="V2">
                               <uix:NApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
@@ -275,11 +272,11 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9da1069c-53c9-4963-8296-46a325874b02" Version="V4">
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click  on POpup'OK'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9da1069c-53c9-4963-8296-46a325874b02" Version="V4">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reset-test-data" CVScreenId="1929c7ea-0226-47e3-a185-2d0345242fe9" CvElementArea="825, 173, 75, 50" CvTextArea="852, 192, 22, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="831, 179, 64, 38" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="28fd3814-1c61-4295-bb66-580140e7b894" InformativeScreenshot="204174add40bb0e527525e3b59a4dc59.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Reset Test Data - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                               <uix:Target CVScreenId="1929c7ea-0226-47e3-a185-2d0345242fe9" CvTextArea="485, 147, 244, 12" CvTextArgument="Your Test Data has been successfully reset." CvType="Text" DesignTimeRectangle="487, 143, 408, 20" ElementType="Text" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='Your Test Data has been successfully reset.' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='Your Test Data has been successfully reset.' role='text' automationid='' check:fulltext='Your Test Data has been successfully reset.' /&gt;" Guid="b7e09986-eb5a-42a6-8e8a-45e9ecb66d75" SearchSteps="Selector, FuzzySelector, CV" />
                                             </scg:List>
                                           </uix:TargetAnchorable.Anchors>
@@ -302,7 +299,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NClick>
-                                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="382,107" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="https://acme-test.uipath.com/work-items" Version="V4" />
+                                    <uix:NGoToUrl DisplayName="Go To WorkItem Page" sap:VirtualizedContainerService.HintSize="382,107" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="https://acme-test.uipath.com/work-items" Version="V4" />
                                   </Sequence>
                                 </ActivityAction>
                               </uix:NApplicationCard.Body>
@@ -343,7 +340,7 @@
                   <av:Size x:Key="ShapeSize">110,70</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Throw Exception="[New SystemException (&quot;Item Already available in Queue&quot;)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1">
+              <Throw Exception="[New SystemException (&quot;Item Already available in Queue&quot;)]" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Throw_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
